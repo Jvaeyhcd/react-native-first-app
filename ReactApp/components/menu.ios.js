@@ -26,6 +26,7 @@ import Index from '../screens/tabbar.ios'
 import ComingSoon from '../screens/soon.ios'
 import FormExample from '../screens/forms.ios'
 import ListViewExample from '../screens/listview.ios'
+import SelectRole from '../screens/selectRole.ios'
 
 // Components
 import Button from './button.ios'
@@ -92,7 +93,7 @@ class Menu extends Component {
           <Button
             text={'申请认证'}
             type={'outlined'}
-            onPress={()=>navigate('申请认证', FormExample)}
+            onPress={()=>navigate('申请认证', SelectRole)}
             height={26}
             borderRadius={13}
             borderColor={'#ffffff'}

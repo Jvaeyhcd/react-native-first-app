@@ -24,7 +24,7 @@ module.exports = StyleSheet.create({
 	container: {
     position: 'relative',
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#f3f3f3',
   },
   containerCentered: {
     justifyContent: 'center',
@@ -204,7 +204,7 @@ module.exports = StyleSheet.create({
   flex6: {
     flex: 6,
   },
- 
+
   /* Forms */
   formLabel: {
     textAlign: 'left',

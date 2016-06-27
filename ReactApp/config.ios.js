@@ -34,6 +34,7 @@ exports.baseFont = 'Avenir';
 
 // Colors
 exports.primaryColor = "#00bf71";
-exports.navColor = "#e2f1eb";
+exports.navColor = "#ffffff";
 exports.textColor = "#555";
 exports.borderColor = "#E7E7E7";
+exports.mainBgColor = "#f3f3f3";
