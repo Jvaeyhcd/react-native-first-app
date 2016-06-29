@@ -55,6 +55,10 @@ class AuthBusiness extends Component {
     });
   }
 
+  commit = () => {
+
+  }
+
   /**
     * RENDER
     */
@@ -179,6 +183,45 @@ class AuthBusiness extends Component {
           <View style={{height:1,backgroundColor:'#d3d1d1'}}></View>
           <Text style={styles.titleTips}>请按照示例照片拍摄并上传您的照片</Text>
         </View>
+        <View style={{height: 10,width:AppConfig.windowWidth, backgroundColor:'#ffffff'}}/>
+        <View style={styles.uploadPicItem}>
+          <Image style={styles.uploadPicExample} source={require('../images/icons/authentication_sl_pic.png')}/>
+          <Image style={styles.uploadPicExample} source={require('../images/icons/upload_id_pic.png')}/>
+        </View>
+        <View style={styles.uploadPicItem}>
+          <Image style={styles.uploadPicExample} source={require('../images/icons/authentication_sl_pic_correct.png')}/>
+          <Image style={styles.uploadPicExample} source={require('../images/icons/upload_id_pic.png')}/>
+        </View>
+        <View style={styles.uploadPicItem}>
+          <Image style={styles.uploadPicExample} source={require('../images/icons/validation_icon_case3.png')}/>
+          <Image style={styles.uploadPicExample} source={require('../images/icons/upload_id_pic.png')}/>
+        </View>
+        <View style={styles.uploadPicItem}>
+          <Image style={styles.uploadPicExample} source={require('../images/icons/validation_icon_case4.png')}/>
+          <Image style={styles.uploadPicExample} source={require('../images/icons/upload_id_pic.png')}/>
+        </View>
+        <View style={{height: 10,width:AppConfig.windowWidth, backgroundColor:'#ffffff'}}/>
+        <View style={styles.commitView}>
+          <View style={styles.ruleTextView}>
+            <Text style={styles.ruleTextTips}>提交验证即表示您已同意</Text>
+            <TouchableOpacity activeOpacity={0.7}>
+              <Text style={styles.ruleText}>《平台服务使用协议》</Text>
+            </TouchableOpacity>
+          </View>
+          <Button
+            text={'提交验证'}
+            height={45}
+            type={'outlined'}
+            backgroundColor={'#00bf71'}
+            borderColor={'#00bf71'}
+            borderRadius={4}
+            textColor={'#ffffff'}
+            marginLeft={15}
+            width={AppConfig.windowWidth - 30}
+            style={styles.commitBtn}
+            textSize={16}
+            onPress={()=>this.commit} />
+        </View>
       </ScrollView>
     );
   }
@@ -214,6 +257,48 @@ const styles = StyleSheet.create({
     width: AppConfig.windowWidth,
     height: 1,
     backgroundColor: '#f5f3f3',
+  },
+  uploadPicItem: {
+    width: AppConfig.windowWidth,
+    height: 120,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection:'row',
+  },
+  uploadPicExample: {
+    marginLeft: 25,
+    marginRight: 25,
+    width: 100,
+    height: 100,
+    // backgroundColor: '#778899',
+  },
+  commitView: {
+    width: AppConfig.windowWidth,
+    height: 100,
+    backgroundColor: '#ece8e7',
+  },
+  ruleTextView: {
+    width: AppConfig.windowWidth,
+    height: 40,
+    backgroundColor: '#ece8e7',
+    paddingLeft: 15,
+    paddingRight: 15,
+    // justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection:'row',
+  },
+  ruleTextTips: {
+    fontSize:12,
+    color: '#999999'
+  },
+  ruleText: {
+    fontSize: 12,
+    color: '#00bf71'
+  },
+  commitBtn: {
+    paddingLeft: 15,
+    paddingRight: 15,
   },
 });
 

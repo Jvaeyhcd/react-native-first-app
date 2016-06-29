@@ -42,11 +42,11 @@ class Button extends Component {
     * RENDER
     */
   render = ()=> {
-    let { text, height, borderRadius, borderColor, textColor,textSize, backgroundColor,marginTop, type, onPress } = this.props;
+    let { text,width, height, borderRadius, borderColor, textColor,textSize, backgroundColor,marginLeft,marginTop, type, onPress } = this.props;
 
     return (
       <TouchableOpacity onPress={onPress} activeOpacity={0.7}
-        style={[styles.button, type == 'outlined' && styles.buttonOutline, {height: height, borderRadius: borderRadius, borderColor: borderColor, backgroundColor:backgroundColor, marginTop: marginTop}]}>
+        style={[styles.button, type == 'outlined' && styles.buttonOutline, {height: height, width:width, marginLeft:marginLeft, borderRadius: borderRadius, borderColor: borderColor, backgroundColor:backgroundColor, marginTop: marginTop}]}>
         <Text style={[AppStyles.baseText, styles.button_text, type == 'outlined' && styles.buttonOutline_text, {fontSize: textSize, color: textColor}]}>
           {text}
         </Text>

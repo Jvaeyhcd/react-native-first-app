@@ -27,6 +27,7 @@ import ComingSoon from '../screens/soon.ios'
 import FormExample from '../screens/forms.ios'
 import ListViewExample from '../screens/listview.ios'
 import SelectRole from '../screens/selectRole.ios'
+import MyInfoView from '../screens/myInfo.ios'
 
 // Components
 import Button from './button.ios'
@@ -84,7 +85,7 @@ class Menu extends Component {
       <View style={[styles.menuContainer]}>
         <View style={[styles.menuHeadContainer]}>
           <TouchableOpacity activeOpacity={0.7}
-          onPress={()=>navigate('我的资料', FormExample)}>
+          onPress={()=>navigate('我的资料', MyInfoView)}>
             <View style={styles.menuUserInfoContainer}>
               <Image source={require('../images/icons/default_icon_man.png')} style={styles.menuUserHead_Img} />
               <Text style={[AppStyles.baseText, styles.menuUserName_Text]}>黄成达</Text>
